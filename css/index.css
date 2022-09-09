@@ -1,0 +1,329 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+body {
+  color: #333;
+  word-break: break-all;
+  font-size: 18px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  width: 100%;
+}
+
+section {
+  background-color: #fff;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1, h2 {
+  font-weight: normal;
+  font-family: "Kiwi Maru", sans-serif;
+  line-height: 1;
+}
+
+h1 {
+  color: #71CC14;
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 60px;
+  color: #71CC14;
+}
+
+nav {
+  font-family: "kiwi", sans-serif;
+}
+nav a {
+  color: #71CC14;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+.header_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  width: 92%;
+  height: 70px;
+  background-color: #fff;
+}
+.header_logo {
+  display: flex;
+  align-items: center;
+}
+.header_logo_img {
+  width: 50px;
+  height: 50px;
+}
+.header_logo_img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header_right {
+  display: flex;
+  align-items: center;
+}
+.header_right nav ul {
+  display: flex;
+}
+.header_right nav ul li {
+  padding-right: 28px;
+}
+.header_right .reservation_btn {
+  padding: 8px 10px;
+  background-color: #559932;
+}
+.header_right .reservation_btn a {
+  color: #fff;
+}
+
+.section_title {
+  padding-top: 80px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.section_title h3 {
+  font-size: 32px;
+  color: #559932;
+  margin-bottom: 8px;
+}
+.section_title span {
+  font-size: 24px;
+  color: #71CC14;
+  font-weight: bold;
+}
+
+.top {
+  z-index: -3;
+  padding-top: 70px;
+  width: 100%;
+  background-color: transparent;
+}
+.top_wrapper {
+  position: relative;
+  height: calc(100vh - 70px);
+}
+.top_wrapper img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.top_text {
+  position: absolute;
+  bottom: 8%;
+  left: 7%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 8px 16px;
+}
+
+.concept_content {
+  position: relative;
+  background-image: url("/images/concept_img.jpg");
+  background-size: cover;
+  background-position: 50% 20%;
+  height: 540px;
+}
+.concept_content::after {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.concept_text {
+  position: absolute;
+  z-index: 2;
+  right: 5%;
+  top: calc(50% - 160px);
+  width: 600px;
+}
+.concept_text p {
+  margin-bottom: 30px;
+}
+.concept_text p:last-child {
+  margin-bottom: 0;
+}
+
+.feature_item {
+  position: relative;
+  height: 500px;
+}
+.feature_item:nth-child(2n) .feature_img {
+  right: 0;
+}
+.feature_item:nth-child(2n) .feature_text {
+  right: auto;
+  left: 0;
+}
+.feature_img {
+  position: absolute;
+  width: 630px;
+  height: 400px;
+}
+.feature_img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.feature_text {
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+  padding: 40px 80px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.feature_text h4 {
+  color: #559932;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.feature_text p {
+  margin-left: 10px;
+}
+
+.menu_item {
+  display: flex;
+  align-items: center;
+}
+.menu_item img {
+  width: 20px;
+  height: 20px;
+}

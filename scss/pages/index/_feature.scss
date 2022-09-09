@@ -1,0 +1,46 @@
+.feature{
+  &_item{
+    position: relative;
+    height: 500px;
+
+    &:nth-child(2n){
+      .feature_img{
+        right: 0;
+      }
+
+      .feature_text{
+        right: auto;
+        left: 0;
+      }
+    }
+  }
+
+  &_img{
+    position: absolute;
+    width: 630px;
+    height: 400px;
+    img{
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &_text{
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    padding: 40px 80px;
+    width: 400px;
+    background-color: rgba(255,255,255,.8);
+    h4{
+      color: $cGreen;
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+    p{
+      margin-left: 10px;
+    }
+  }
+}

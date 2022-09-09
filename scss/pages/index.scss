@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@import "../base/reset";
+@import "../base/base";
+@import "../config";
+@import "../mixin";
+@import "../animation";
+@import "../common";
+@import "./index/top";
+@import "./index/concept";
+@import "./index/feature";
+
+// @import "./index/service";
+// @import "./index/skills";
+// @import "./index/works";
+
+.menu {
+
+
+  &_item{
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+
+// ヘッダー
+.header{
+  &_wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+    width: 92%;
+    height: 70px;
+    background-color: $cWhite;
+  }
+
+  &_logo{
+    display: flex;
+    align-items: center;
+    &_img{
+      width: 50px;
+      height: 50px;
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  &_right{
+    display: flex;
+    align-items: center;
+
+    nav ul{
+      display: flex;
+      li{
+        padding-right: 28px;
+      }
+    }
+
+    .reservation_btn{
+      padding: 8px 10px;
+      background-color: $cGreen;
+      a {
+        color: $cWhite;
+      }
+    }
+  }
+}
+
+
+// セクションタイトル
+.section_title {
+  padding-top: 80px;
+  text-align: center;
+  padding-bottom: 40px;
+
+  h3{
+    font-size: 32px;
+    color: $cGreen;
+    margin-bottom: 8px;
+  }
+  span{
+    font-size: 24px;
+    color: $cGreen_light;
+    font-weight: bold;
+  }
+}

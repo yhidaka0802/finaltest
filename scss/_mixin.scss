@@ -1,0 +1,15 @@
+
+$breakpoint: (
+  'sp':'screen and (max-width: 480px)',
+  'tb':'screen and (max-width: 768px)',
+  'pc':'screen and (max-width: 1024px)',
+);
+
+@mixin mq($bp){
+  @media #{map-get($breakpoint, $bp)} {
+    @content; 
+  }
+}
+// 呼び出し @include mq(サイズ');
+
+
