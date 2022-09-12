@@ -13,3 +13,19 @@ $breakpoint: (
 // 呼び出し @include mq(サイズ');
 
 
+@mixin btn{
+  a {
+    padding: 14px 10px;
+    background-color: $cGreen;
+    color: $cWhite;
+    border: 1px solid $cWhite;
+    transition: .3s;
+
+    &:hover{
+      color: $cGreen;
+      background-color: $cWhite;
+      border: 1px solid $cGreen;
+      box-sizing: border-box;
+    }
+  }
+}

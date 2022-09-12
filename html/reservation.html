@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, viewport-fit=cover">
+    <title>架空歯科</title>
+    <meta name="description" content="患者様の安心と納得を重視した歯医者です。">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/reservation.css">
+  </head>
+  <body>
+    <header>
+      <div class="header_wrapper">
+        <a href="/index.html" class="header_logo">
+          <div class="header_logo_img">
+            <img src="/images/logo.png" alt="ロゴ画像">
+          </div>
+          <h1>架空歯科</h1>
+        </a>
+        <div class="header_right">
+          <nav id="g-nav">
+            <ul>
+              <li><a href="/index.html">HOME</a></li>
+              <li><a href="/html/about.html">医院紹介</a></li>
+              <li><a href="/html/menu.html">診療案内</a></li>
+              <li><a href="/html/staff.html">スタッフ紹介</a></li>
+              <li class="hide"><a href="/html/reservation.html">予約フォーム</a></li>
+            </ul>
+          </nav>
+          <div class="openbtn"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="top">
+        <h2>予約フォーム</h2>
+      </section>
+      <section class="reservation">
+        <div class="wrapper">
+          <div class="reservation_text">
+            <p>予約を希望の方は以下のフォームにご入力ください。<br><span>*</span>は入力必須項目です。</p>
+          </div>
+          <form action="#" class="reservation_form" id="form">
+            <div class="reservation_box">
+              <label for="name" class="reservation_form_title">お名前<span>*</span></label>
+              <input type="text" class="reservation_form_box" id="name" placeholder="山田太郎" required>
+            </div>
+            <div class="reservation_box">
+              <label for="age" class="reservation_form_title">年齢<span>*</span></label>
+              <input type="number" class="reservation_form_box" id="age" placeholder="35" required>
+            </div>
+            <div class="reservation_box">
+              <label for="tel" class="reservation_form_title">電話番号<span>*</span></label>
+              <input type="text" class="reservation_form_box" id="tel" placeholder="080-xxxx-xxxx" required>
+            </div>
+            <div class="reservation_box">
+              <label for="mail" class="reservation_form_title">メールアドレス<span>*</span></label>
+              <input type="text" class="reservation_form_box" id="mail" placeholder="kaku_dental@gmail.com" required>
+            </div>
+            <div class="reservation_box">
+              <label for="menu" class="reservation_form_title">ご予約内容<span>*</span></label>
+              <select name="menu" id="menu" class="reservation_form_box menu" required>
+                <option value="">--選択--</option>
+                <option value="mushiba">むし歯治療</option>
+                <option value="shishubyo">歯周病治療</option>
+                <option value="yobo">予防歯科</option>
+                <option value="shinbi">審美歯科</option>
+                <option value="kyosei">矯正歯科</option>
+              </select>
+            </div>
+            <div class="reservation_box">
+              <label for="date" class="reservation_form_title">ご予約日時<span>*</span></label>
+              <input type="date" class="reservation_form_box date" id="date" required>
+            </div>
+            <div class="reservation_box">
+              <label for="message" class="reservation_form_title">ご不明点・ご質問など</label>
+              <textarea name="message" id="message" cols="30" rows="10" class="reservation_form_textarea" placeholder="ご自由にお書きください。折り返し回答させていただきます。"></textarea>
+            </div>
+            <button type="submit" class="reservation_btn">予約する</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="copyright"><p>© 2022 架空歯科 All Rights Reserved.</p></div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/script/main.js"></script>
+  </body>
+</html>

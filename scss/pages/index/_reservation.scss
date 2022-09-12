@@ -1,0 +1,64 @@
+.reservation{
+  background-color: $cbg;
+  padding-bottom: 150px;
+  @include mq(sp){
+    padding-bottom: 120px;
+    // padding-top: 40px;
+  }
+  &_content{
+    text-align: center;
+
+    @include mq(sp){
+      &>p{
+      text-align: left;
+      display: inline-block;
+        width: 300px;
+      }
+    }
+  }
+
+  &_call{
+    margin-top: 40px;
+
+    @include btn;
+    img{
+      margin-right: 10px;
+      width: 35px;
+      height: 35px;
+    }
+    .hover_icon{
+      display: none;
+    }
+    p{
+      position: relative;
+      bottom: 10px;
+      display: inline;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    a{
+      display: inline-block;
+      padding: 14px 20px;
+      line-height: 0;
+      &:hover{
+        .normal_icon{
+          display: none;
+        }
+        .hover_icon{
+          display: inline;
+        }
+      }
+    }
+  }
+
+  &_btn{
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 22px;
+
+    @include btn;
+    a{
+      padding:  20px 18px;
+    }
+  }
+}

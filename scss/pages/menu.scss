@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+@import "../base/reset";
+@import "../base/base";
+@import "../config";
+@import "../mixin";
+@import "../animation";
+@import "../common";
+@import "./index/concept";
+@import "./index/reservation";
+@import "./index/access";
+
+.top {
+  margin-top: 70px;
+  width: 100%;
+  height: 300px;
+  background-color: $cGreen;
+
+  h2{
+    padding-top: 120px;
+    color: $cWhite;
+    text-align: center;
+  }
+}
+
+.concept{
+  padding-bottom: 60px;
+
+  &_text{
+    top: calc(50% - 190px);
+  }
+}
+
+.menu {
+
+  ul {
+    margin: 0 auto;
+    max-width: 800px;
+    @include mq(tb){
+      max-width: 600px;
+    }
+    @include mq(sp){
+      max-width: 350px;
+    }
+  }
+  li{
+    margin: 60px auto;
+    @include mq(sp){
+      margin: 30px auto;
+
+      &:first-child{
+        margin-top: 0;
+      }
+    }
+  }
+  .accordion{
+    border: 1px solid $cBlack;
+
+    &_title{
+      position: relative;
+      padding: 18px 0 18px 70px;
+      font-size: 24px;
+      color: $cWhite;
+      line-height: 1;
+      cursor: pointer;
+      background-color: $cGreen;
+      @include mq(sp){
+        font-size: 20px;
+        padding-left: 60px;
+      }
+      
+      &::before,&::after{
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 3px;
+        background-color: white;
+      }
+
+      &::before{
+        top: 48%;
+        left: 23px;
+        transform: rotate(0deg);
+        @include mq(sp){
+          left: 15px;
+        }
+      }
+      &::after{
+        top: 48%;
+        left: 23px;
+        transform: rotate(90deg);
+        @include mq(sp){
+          left: 15px;
+        }
+      }
+
+      &.close::before{
+        transform: rotate(45deg);
+      }
+      &.close::after{
+        transform: rotate(-45deg);
+      }
+    }
+
+    &_box{
+      display: none;
+      background-color: $cWhite;
+      padding: 4%;
+    }
+  }
+
+  &_message{
+    text-align: center;
+    color: $cGreen;
+    font-weight: bold;
+    font-size: 28px;
+    padding-bottom: 100px;
+
+    @include mq(tb){
+      max-width: 580px;
+      margin: 0 auto;
+    }
+    @include mq(sp){
+      font-size: 24px;
+      max-width: 300px;
+      margin-top: 50px;
+    }
+  }
+}

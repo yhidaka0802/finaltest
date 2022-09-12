@@ -6,43 +6,54 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0, viewport-fit=cover">
     <title>架空歯科</title>
     <meta name="description" content="患者様の安心と納得を重視した歯医者です。">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css">
   </head>
   <body>
     <header>
       <div class="header_wrapper">
-        <a href="#" class="header_logo">
+        <a href="/index.html" class="header_logo">
           <div class="header_logo_img">
             <img src="/images/logo.png" alt="ロゴ画像">
           </div>
           <h1>架空歯科</h1>
         </a>
         <div class="header_right">
-          <nav>
+          <nav id="g-nav">
             <ul>
-              <li><a href="/index.html">HOME</a></li>
+              <li class="current"><a href="/index.html">HOME</a></li>
               <li><a href="/html/about.html">医院紹介</a></li>
               <li><a href="/html/menu.html">診療案内</a></li>
               <li><a href="/html/staff.html">スタッフ紹介</a></li>
+              <li class="hide"><a href="/html/reservation.html">予約フォーム</a></li>
             </ul>
           </nav>
-          <div class="reservation_btn">
+          <div class="reservation_link">
             <a href="#reservation">ご予約はコチラ</a>
           </div>
+          <div class="openbtn"><span></span><span></span><span></span></div>
         </div>
       </div>
     </header>
     <main>
       <section class="top">
         <div class="top_wrapper">
-          <img src="/images/top_bg1.jpg" alt="トップ画像です">
-            <div class="top_text">
-              <h2>納得と安心をモットーに</h2>
-            </div>
+          <ul class="slider" id="js-slider">
+            <li><img src="/images/top_bg1.jpg" alt="トップ画像１"></li>
+            <li><img src="/images/top_bg2.jpg" alt="トップ画像２"></li>
+            <li><img src="/images/top_bg3.jpg" alt="トップ画像３"></li>
+            <li><img src="/images/top_bg4.jpg" alt="トップ画像４"></li>
+          </ul>
+          <div class="progress_bar">
+            <div class="bar" id="js-progressBar"></div>
+          </div>
+          <div class="top_text blurTrigger">
+            <h2>納得と安心をモットーに</h2>
+          </div>
         </div>
       </section>
       <section class="concept">
@@ -52,7 +63,10 @@
             <span>Concept</span>
           </div>
           <div class="concept_content">
-            <div class="concept_text">
+            <div class="concept_img">
+              <img src="/images/concept_img.jpg" alt="コンセプト画像">
+            </div>
+            <div class="concept_text fadeUpTrigger">
               <p>私達の理念は「納得のいく説明と安心の技術で」、患者の皆さまが満足していただける治療をすることにあります。</p>
               <p>患者様はお口のトラブルでとても大変な思いをされています。当院のスタッフはそんな患者様ひとりひとりに寄り添い、分かりやすい説明を元にそれぞれに合った治療法を提案させていただきます。</p>
               <p>また当院のスタッフは高い技術力を有しており、患者様の歯を丁寧に治療させていただきます。皆様に満足していただける治療ができるよう、日々技術力の向上にも努めています。</p>
@@ -69,28 +83,28 @@
           <ul class="feature_list">
             <li class="feature_item">
               <div class="feature_img"><img src="/images/feature1.jpg" alt="診察画像"></div>
-              <div class="feature_text">
+              <div class="feature_text fadeUpTrigger">
                 <h4>広範囲の知識による的確な診察</h4>
-                <p>当院のスタッフは全員が歯科医学に精通した<br>プロフェッショナルです。患者様の歯の状態を<br>観察し、的確な診断を下すことで問題の解決を<br>図ります。</p>
+                <p>当院のスタッフは全員が歯科医学に精通したプロフェッショナルです。患者様の歯の状態を観察し、的確な診断を下すことで問題の解決を図ります。</p>
               </div>
             </li>
             <li class="feature_item">
               <div class="feature_img"><img src="/images/feature2.jpg" alt="説明画像"></div>
-              <div class="feature_text">
+              <div class="feature_text fadeUpTrigger">
                 <h4>納得のいく丁寧な説明</h4>
-                <p>診察結果をわかりやすく説明するとともに<br>おひとりおひとりに合った治療プランをご提案<br>いたします。ご不明点などありましたら、遠慮なくお聞きください。</p>
+                <p>診察結果をわかりやすく説明するとともにおひとりおひとりに合った治療プランをご提案いたします。ご不明点などありましたら、遠慮なくお聞きください。</p>
               </div>
             </li>
             <li class="feature_item">
               <div class="feature_img"><img src="/images/feature3.jpg" alt="診察画像"></div>
-              <div class="feature_text">
+              <div class="feature_text fadeUpTrigger">
                 <h4>高い技術力による施術</h4>
-                <p>当院のスタッフは高い技術力を有しており、<br>患者様に痛みを感じさせないよう、丁寧かつ<br>迅速に治療いたします。治療に恐怖心のある方はぜひ当院までご相談ください。</p>
+                <p>当院のスタッフは高い技術力を有しており、患者様に痛みを感じさせないよう、丁寧かつ迅速に治療いたします。治療に恐怖心のある方はぜひ当院までご相談ください。</p>
               </div>
             </li>
             <li class="feature_item">
               <div class="feature_img"><img src="/images/feature4.jpg" alt="診察画像"></div>
-              <div class="feature_text">
+              <div class="feature_text fadeUpTrigger">
                 <h4>お子様連れでも安心</h4>
                 <p>当院にはキッズスペースを備えており、お子様連れでも安心しておいでいただけます。治療中の待ち時間にお子様には楽しんでいただくことができるため、安心して治療を受けることができます。</p>
               </div>
@@ -104,38 +118,140 @@
             <h3>診察メニュー</h3>
             <span>MENU</span>
           </div>
+          <ul class="menu_list">
+            <li class="menu_item">
+              <img src="/images/menu.png" alt="チェック">
+              <p>むし歯治療</p>
+            </li>
+            <li class="menu_item">
+              <img src="/images/menu.png" alt="チェック">
+              <p>歯周病治療</p>
+            </li>
+            <li class="menu_item">
+              <img src="/images/menu.png" alt="チェック">
+              <p>予防歯科</p>
+            </li>
+            <li class="menu_item">
+              <img src="/images/menu.png" alt="チェック">
+              <p>審美歯科・ホワイトニング</p>
+            </li>
+            <li class="menu_item">
+              <img src="/images/menu.png" alt="チェック">
+              <p>矯正歯科・マウスピース矯正</p>
+            </li>
+          </ul>
+          <div class="menu_btn fadeUpTrigger">
+            <a href="/html/menu.html">詳しくはコチラ</a>
+          </div>
         </div>
-        <ul class="menu_list">
-          <li class="menu_item">
-            <img src="/images/menu.png" alt="チェック">
-            <p>むし歯治療</p>
-          </li>
-          <li class="menu_item">
-            <img src="/images/menu.png" alt="チェック">
-            <p>歯周病治療</p>
-          </li>
-          <li class="menu_item">
-            <img src="/images/menu.png" alt="チェック">
-            <p>予防歯科</p>
-          </li>
-          <li class="menu_item">
-            <img src="/images/menu.png" alt="チェック">
-            <p>審美歯科・ホワイトニング</p>
-          </li>
-          <li class="menu_item">
-            <img src="/images/menu.png" alt="チェック">
-            <p>矯正歯科・マウスピース矯正</p>
-          </li>
-        </ul>
-        <div class="menu_btn">
-          <a href="#menu">ご予約はコチラ</a>
+      </section>
+      <section class="message">
+        <div class="wrapper">
+          <div class="section_title">
+            <h3>院長メッセージ</h3>
+            <span>MESSAGE</span>
+          </div>
+          <div class="message_content">
+            <div class="message_img fadeRightTrigger">
+              <img src="./images/message_2.jpg" alt="メッセージ画像">
+            </div>
+            <div class="message_text">
+              <p>はじめまして。架空歯科の院長、木口力です。</p>
+              <p>お口の中のトラブルは日常生活に大きな影響を及ぼします。我々は患者様おひとりおひとりが快適な生活を送れるようにお口の中の健康という点でお支えします。</p>
+              <p>当院はむし歯治療・歯周病治療により患者様のお口の健康を保つとともに、審美歯科やホワイトニングにより歯を美しく魅せることにも力を入れております。</p>
+              <p>患者様おひとりおひとりにあった治療法を提案させていただきますので、ぜひ一度当院においでください。あなたのご来院をお待ちしております。</p>
+              <div class="message_text_name">
+                <p>院長<span>木口力</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reservation" id="reservation">
+        <div class="wrapper">
+          <div class="section_title">
+            <h3>ご予約</h3>
+            <span>RESERVATION</span>
+          </div>
+          <div class="reservation_content">
+            <p>患者様をお待たせしないよう予約制にてご案内しております。<br>ご予約はお電話もしくは予約フォームから承ります。
+            </p>
+            <div class="reservation_call fadeUpTrigger">
+              <a href="tel:080-xxxx-xxxx">
+                <img class="normal_icon" src="/images/tel1.png" alt="電話">
+                <img class="hover_icon" src="/images/tel2.png" alt="電話">
+                <p>080-xxxx-xxxx</p>
+              </a>
+            </div>
+            <div class="reservation_btn fadeUpTrigger">
+              <a href="/html/reservation.html">予約フォームはコチラ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="access">
+        <div class="access_wrapper">
+          <div class="access_content">
+            <div class="access_text">
+              <a href="#" class="access_logo">
+                <div class="access_logo_img">
+                  <img src="/images/logo.png" alt="ロゴ画像">
+                </div>
+                <h1>架空歯科</h1>
+              </a>
+              <p>〒182-0024 東京都調布市布田4丁目</p>
+              <p>TEL 080-xxxx-xxxx</p>
+            </div>
+            <table class="biz_hour">
+              <tbody>
+                <tr>
+                  <th>診療時間</th>
+                  <th>月</th>
+                  <th>火</th>
+                  <th>水</th>
+                  <th>木</th>
+                  <th>金</th>
+                  <th>土</th>
+                  <th>日</th>
+                </tr>
+                <tr>
+                  <td>09:00 - 12:30</td>
+                  <td class="color">●</td>
+                  <td class="color">●</td>
+                  <td class="color">●</td>
+                  <td class="color">●</td>
+                  <td class="color">●</td>
+                  <td class="color">●</td>
+                  <td class="color">─</td>
+                </tr>
+                <tr>
+                  <td>14:00 - 17:30</td>
+                  <td class="color">●</td>
+                  <td class="color">●</td>
+                  <td class="color">●</td>
+                  <td class="color">●</td>
+                  <td class="color">●</td>
+                  <td class="color">─</td>
+                  <td class="color">─</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="access_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5808.858826041041!2d139.54135877500048!3d35.651130496847514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f014b520e627%3A0xb392e336bb5731b6!2z6Kq_5biD6aeF!5e0!3m2!1sja!2sjp!4v1662854988579!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </section>
     </main>
-
-
-
+    <footer>
+      <div class="footer_wrapper">
+        <div class="footer_access">
+          
+      </div>
+      <div class="copyright"><p>© 2022 架空歯科 All Rights Reserved.</p></div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script/main.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/script/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,98 @@
+.access{
+  &_wrapper{
+    position: relative;
+    background-color: $cWhite;
+    @include mq(tb){
+      height: 750px;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    @include mq(sp){
+      height: 647px;
+    }
+  }
+
+  &_logo{
+    display: flex;
+    align-items: center;
+    &_img{
+      width: 50px;
+      height: 50px;
+      margin-right: 18px;
+      margin-bottom: 14px;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  &_content {
+    max-width: 560px;
+    position: absolute;
+    left: 50px;
+    top: 30px;
+    @include mq(tb){
+      position: initial;
+      margin: 50px auto;
+    }
+  }
+  
+  &_map {
+    margin-left: 650px;
+    width: calc(100% - 650px);
+    height: 400px;
+    overflow: hidden;
+
+    @include mq(tb){
+      margin-left: 0;
+      width: 100%;
+    }
+    @include mq(sp){
+      height: 300px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 700px;
+      margin-top: -150px;
+      @include mq(sp){
+        height: 600px;
+      }
+    }
+  }
+}
+
+.biz_hour {
+  margin-top: 24px;
+  display: block;
+  border-collapse: collapse;
+  
+
+  th {
+    border-top: 1px solid $cGreen;
+    font-weight: normal;
+  }
+
+  th, td {
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid $cGreen;
+
+    @include mq(sp){
+      padding: 5px;
+    }
+  }
+  
+  tr:nth-child(2){
+    td {
+      border-bottom: none;
+    }
+  }
+
+  td {
+    color: $cGreen;
+    &:nth-child(1){
+      color: $cBlack;
+    }
+  }
+}

@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+@import "../base/reset";
+@import "../base/base";
+@import "../config";
+@import "../mixin";
+@import "../animation";
+@import "../common";
+@import "./index/reservation";
+@import "./index/access";
+
+.top {
+  margin-top: 70px;
+  width: 100%;
+  height: 300px;
+  background-color: $cGreen;
+
+  h2{
+    padding-top: 120px;
+    color: $cWhite;
+    text-align: center;
+  }
+}
+
+
+.staff{
+  &_list{
+    margin: 100px auto;
+    max-width: 1000px;
+  }
+
+  li {
+    margin-bottom: 120px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  li>ul>li{
+    margin-bottom: 0;
+  }
+  h3{
+    margin-bottom: 20px;
+    font-size: 28px;
+    @include mq(tb){
+      text-align: center;
+    }
+    @include mq(sp){
+      font-size: 24px;
+    }
+  }
+
+  &_content{
+    display: flex;
+    @include mq(tb){
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &_img{
+    width: 400px;
+    height: 525px;
+    @include mq(tb){
+      width: auto;
+      max-width: 600px;
+      height: 400px;
+    }
+    @include mq(sp){
+      height: 300px;
+    }
+
+    img{
+      height: 100%;
+
+      object-fit: cover;
+      object-position: 85% 50%;
+    }
+    .vice{
+      object-position: 10% 50%;
+    }
+  }
+
+  &_text{
+    position: relative;
+    width: 600px;
+    @include mq(tb){
+      position: initial;
+      width: auto;
+      max-width: 600px;
+    }
+
+    h4{
+      position: relative;
+      top: 50px;
+      left: -50px;
+      padding: 24px 0 24px 32px;
+      width: 105%;
+      background-color: $cGreen;
+      color: white;
+      font-size: 28px;
+      line-height: 1;
+      @include mq(tb){
+        position: unset; 
+        width: auto;
+        max-width: 600px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+        padding: 24px 0;
+      }
+      @include mq(sp){
+        font-size: 24px;
+        padding: 12px 0;
+        margin-top: 20px;
+      }
+    }
+
+    &_content{
+      position: absolute;
+      top: 180px;
+      left: 50px;
+      @include mq(tb){
+        position: initial;
+      }
+
+      p:nth-child(2){
+        margin-top: 28px;
+      }
+    }
+  }
+
+li>ul{
+  display: flex;
+  justify-content: center;
+  @include mq(tb){
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+  &_introduction{
+    text-align: center;
+    margin-right: 40px;
+    @include mq(tb){
+      margin-right: 0;
+    }
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  &_img_mini{
+    max-width: 300px;
+    height: 300px;
+    overflow: hidden;
+
+    img{
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+  .staff1 img{
+    height: 320px;
+  }
+  .staff2 img{
+    object-position: 20% 50%;
+  }
+  .staff3 img{
+    object-position: 70% 50%;
+  }
+
+  &_name{
+    margin-top: 24px;
+    @include mq(tb){
+      color: $cWhite;
+      margin-bottom: 50px;
+    }
+    p{
+      display: inline;
+      background-color: $cGreen;
+      font-weight: bold;
+      font-size: 24px;
+      padding: 16px 24px;
+      color: white;
+      @include mq(sp){
+        font-size: 20px;
+        padding: 12px 18px;
+      }
+    }
+  }
+}

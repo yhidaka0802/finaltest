@@ -1,91 +1,173 @@
-// // ハンバーガーメニュー
-// .openbtn {
-//   display: none;
-// }
+// ハンバーガーメニュー
+.openbtn {
+  display: none;
+}
 
-// @include mq(tb){
-//   .openbtn {
-//     position: relative;
-//     z-index: 9999;
-//     display: inline-block;
-//     width: 50px;
-//     height: 50px;
-//     border: 3px solid $cWhite;
-//     border-radius: 5px;
-//     cursor: pointer;
+@include mq(tb){
+  #g-nav{
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background-color: $cWhite;
+    transition: all .6s;
+
+    &.panelactive{
+      top: 0;
+    }
+
+    ul{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 999;
+      flex-direction: column;
+      transform: translate(-50%,-50%);
+    }
+
+    li{
+      text-align: center;
+      margin-bottom: 40px;
+      padding-right: 0;
+
+      a{
+        padding: 10px;
+        font-size: 36px;
+        @include mq(sp){
+          font-size: 28px;
+        }
+      }
+    }
+  }
+
+  .openbtn {
+    position: relative;
+    z-index: 9999;
+    display: inline-block;
+    margin-left: 16px;
+    width: 50px;
+    height: 50px;
+    border: 3px solid $cGreen;
+    border-radius: 5px;
+    cursor: pointer;
   
-//     span {
-//       position: absolute;
-//       left: 14px;
-//       display: inline-block;
-//       width: 45%;
-//       height: 3px;
-//       border-radius: 2px;
-//       background-color: $cWhite;
-//       transition: all .4s;
+    span {
+      position: absolute;
+      left: 14px;
+      display: inline-block;
+      width: 45%;
+      height: 3px;
+      border-radius: 2px;
+      background-color: $cGreen;
+      transition: all .4s;
   
-//       &:nth-of-type(1){
-//         top: 15px;
-//       }
-//       &:nth-of-type(2){
-//         top: 23px;
-//       }
-//       &:nth-of-type(3){
-//         top: 31px;
-//       }
-//     }
+      &:nth-of-type(1){
+        top: 15px;
+      }
+      &:nth-of-type(2){
+        top: 23px;
+      }
+      &:nth-of-type(3){
+        top: 31px;
+      }
+    }
 
-//     &.active {
-//       border: 3px solid $cBlue;
-
-//       span{
-//         background-color: $cBlue;
-  
-//         &:nth-of-type(1){
-//           top: 18px;
-//           left: 18px;
-//           width: 30%;
-//           transform: translateY(6px) rotate(-45deg);
-//         }
-//         &:nth-of-type(2){
-//           opacity: 0;
-//         }
-//         &:nth-of-type(3){
-//           top: 30px;
-//           left: 18px;
-//           width: 30%;
-//           transform: translateY(-6px) rotate(45deg);
-//         }
-//       }
-//     }
-//   }
-// }
+    &.active {
+      span{
+        &:nth-of-type(1){
+          top: 18px;
+          left: 18px;
+          width: 30%;
+          transform: translateY(6px) rotate(-45deg);
+        }
+        &:nth-of-type(2){
+          opacity: 0;
+        }
+        &:nth-of-type(3){
+          top: 30px;
+          left: 18px;
+          width: 30%;
+          transform: translateY(-6px) rotate(45deg);
+        }
+      }
+    }
+  }
+}
 
 
-// // フェードインアニメーション
-// .blur {
-//   animation-name: blurAnime;
-//   animation-duration: 1s;
+// フェードインアニメーション
+.fadeUp {
+  opacity: 0;
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
 
-//   animation-fill-mode: forwards;
-// }
+  animation-fill-mode: forwards;
+}
 
-// @keyframes blurAnime {
-//   from {
-//     opacity: 0;
-//     filter: blur(10px);
-//     transform: scale(1.02);
-//   }
-//   to {
-//     opacity: 1;
-//     filter: blur(0);
-//     transform: scale(1);
-//   }
-// }
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-// .blurTrigger {
-//   opacity: 0;
-// }
+.fadeUpTrigger {
+  opacity: 0;
+}
+
+
+.fadeRight {
+  animation-name: fadeRightAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeRightAnime {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeRightTrigger{
+  opacity: 0;
+}
+
+
+.blur {
+  animation-name: blurAnime;
+  animation-duration: 1s;
+
+  animation-fill-mode: forwards;
+}
+
+@keyframes blurAnime {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+.blurTrigger {
+  opacity: 0;
+}
 
 
 // .zoomIn {
@@ -110,52 +192,33 @@
 //   opacity: 0;
 // }
 
-// .fadeUp {
-//   opacity: 0;
-//   animation-name: fadeUpAnime;
-//   animation-duration: 1s;
 
-//   animation-fill-mode: forwards;
-// }
+// テキストナビゲーション
+#g-nav {
+  li {
+    a {
+      position: relative;
 
-// @keyframes fadeUpAnime {
-//   from {
-//     opacity: 0;
-//     transform: translateY(50px);
-//   }
-//   to {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
+      &::after {
+        position: absolute;
+        bottom: -5px;
+        left: 10%;
+        width: 80%;
+        height: 2px;
+        background-color: $cGreen_light;
+        content: '';
+        transition: all .3s;
+        transform: scale(0,1);
+        transform-origin: center top;
+      }
 
-// .fadeUpTrigger {
-//   opacity: 0;
-// }
+      &:hover::after {
+        transform: scale(1,1);
+      }
+    }
 
-
-// // テキストナビゲーション
-// #g-nav {
-//   li {
-//     a {
-//       position: relative;
-
-//       &::after {
-//         position: absolute;
-//         bottom: 0;
-//         left: 10%;
-//         width: 80%;
-//         height: 2px;
-//         background-color: $cWhite;
-//         content: '';
-//         transition: all .3s;
-//         transform: scale(0,1);
-//         transform-origin: center top;
-//       }
-
-//       &:hover::after {
-//         transform: scale(1,1);
-//       }
-//     }
-//   }
-// }
+    &.current a::after{
+      transform: scale(1,1);
+    }
+  }
+}

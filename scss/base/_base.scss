@@ -10,9 +10,9 @@ body {
   position: relative;
   z-index: 1;
 
-  // @include mq(sp){
-  //   font-size: 14px;
-  // }
+  @include mq(sp){
+    font-size: 14px;
+  }
 }
 
 main {
@@ -50,9 +50,9 @@ h1 {
 h2 {
   font-size: 60px;
   color: $cGreen_light;
-  // @include mq(sp){
-  //   font-size: 50px;
-  // }
+  @include mq(sp){
+    font-size: 40px;
+  }
 }
 
 nav {

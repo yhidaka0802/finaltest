@@ -21,6 +21,7 @@
     &_img{
       width: 50px;
       height: 50px;
+      margin-right: 18px;
 
       img {
         object-fit: cover;
@@ -34,16 +35,22 @@
 
     nav ul{
       display: flex;
+
       li{
         padding-right: 28px;
       }
+      .hide{
+        display: none;
+        @include mq(tb){
+          display: list-item
+        }
+      }
     }
 
-    .reservation_btn{
-      padding: 8px 10px;
-      background-color: $cGreen;
-      a {
-        color: $cWhite;
+    .reservation_link{
+      @include btn;
+      @include mq(sp){
+        display: none;
       }
     }
   }
@@ -52,7 +59,7 @@
 
 // セクションタイトル
 .section_title {
-  padding-top: 80px;
+  padding-top: 120px;
   text-align: center;
   padding-bottom: 40px;
 
@@ -60,10 +67,28 @@
     font-size: 32px;
     color: $cGreen;
     margin-bottom: 8px;
+    @include mq(sp){
+      font-size: 24px;
+    }
   }
   span{
     font-size: 24px;
     color: $cGreen_light;
     font-weight: bold;
+    @include mq(sp){
+      font-size: 18px;
+    }
+  }
+}
+
+// フッター
+.copyright{
+  background-color: $cGreen;
+
+  p{
+    text-align: center;
+    line-height: 3;
+    color: $cWhite;
+    font-size: 12px;
   }
 }

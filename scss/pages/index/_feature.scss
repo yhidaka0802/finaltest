@@ -3,6 +3,11 @@
     position: relative;
     height: 500px;
 
+    @include mq(tb){
+      height: auto;
+      padding-bottom: 50px;
+    }
+
     &:nth-child(2n){
       .feature_img{
         right: 0;
@@ -17,8 +22,16 @@
 
   &_img{
     position: absolute;
-    width: 630px;
+    max-width: 630px;
     height: 400px;
+
+    @include mq(tb){
+      position: initial;
+      margin: 0 auto;
+    }
+    @include mq(sp){
+      height: 300px;
+    }
     img{
       height: 100%;
 
@@ -31,16 +44,33 @@
     right: 0;
     bottom: 50px;
     padding: 40px 80px;
-    width: 400px;
+    max-width: 400px;
     background-color: rgba(255,255,255,.8);
+
+    @include mq(tb){
+      position: initial;
+      margin: 0 auto;
+      padding: 40px 0;
+      max-width: 580px;
+    }
     h4{
+      margin-bottom: 40px;
       color: $cGreen;
       text-align: center;
       font-size: 28px;
-      margin-bottom: 40px;
+      @include mq(tb){
+        margin-bottom: 20px;
+      }
+      @include mq(sp){
+        font-size: 24px;
+      }
     }
     p{
       margin-left: 10px;
+      @include mq(tb){
+        margin-left: 0;
+        padding: 0 2%;
+      }
     }
   }
 }

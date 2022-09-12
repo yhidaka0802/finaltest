@@ -9,21 +9,7 @@
 @import "./index/top";
 @import "./index/concept";
 @import "./index/feature";
-
-// @import "./index/service";
-// @import "./index/skills";
-// @import "./index/works";
-
-.menu {
-
-
-  &_item{
-    display: flex;
-    align-items: center;
-
-    img {
-      width: 20px;
-      height: 20px;
-    }
-  }
-}
+@import "./index/menu";
+@import "./index/message";
+@import "./index/reservation";
+@import "./index/access";

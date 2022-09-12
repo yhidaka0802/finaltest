@@ -1,0 +1,84 @@
+.message {
+  padding-bottom: 50px;
+
+  &_content{
+    position: relative;
+    height: 575px;
+    @include mq(tb){
+      height: auto;
+    }
+  }
+
+  
+  &_img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 550px;
+    height: 575px;
+    @include mq(tb){
+      position: initial;
+      max-width: 600px;
+      margin: 0 auto;
+      height: 400px;
+    }
+    @include mq(sp){
+      height: 300px;
+    }
+    
+    &::after{
+      content: '';
+      background-color: rgba(255,255,255,.1);
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+    img{
+      height: 100%;
+      object-fit: cover;
+      object-position: right 50%;
+    }
+  }
+
+  &_text {
+    padding: 24px 60px 0 40px;
+    max-width: 500px;
+    background-color: $cWhite-bg;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    @include mq(tb){
+      position: initial;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 24px 2%;
+    }
+
+    p{
+      margin-bottom: 30px;
+      
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    &_name{
+      font-weight: bold;
+      font-size: 24px;
+      float: right;
+      position: relative;
+      right: -20px;
+      @include mq(tb){
+        right: 0;
+      }
+      
+      span{
+        font-size: 36px;
+        margin-left: 24px;
+      }
+    }
+  }
+}

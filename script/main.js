@@ -12,44 +12,69 @@ $('#g-nav a').click(function(){
 });
 
 
-// ヘッダーの色変換
+// slick
 $(function(){
-  $(window).on('scroll', function(){
-    if($('.top').height() < $(this).scrollTop() + 70){
-      $('.js-header').addClass('change-color');
-    } else {
-      $('.js-header').removeClass('change-color');
-    }
+  var $slider = $('#js-slider')
+
+  $slider.slick({
+    speed: 2000,
+    arrows: false,
+    dots: false,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    slidesToShow: 1,
   });
-});
+
+  var
+    time = 8,
+    $bar = $('#js-progressBar'),
+    isPause,
+    tick,
+    percentTime;
+  function startProgressbar(){
+    resetProgressbar();
+    percentTime = 0;
+    isPause = false;
+    tick = setInterval(interval, 10);
+  }
+  function interval(){
+    if(isPause === false){
+      percentTime += 1/ (time + 0.1);
+      $bar.css({
+        width: percentTime + "%"
+      });
+      if(percentTime >= 100){
+        $slider.slick('slickNext');
+        startProgressbar();
+      }
+    }
+  }
+  function resetProgressbar(){
+    $bar.css({
+      width: 0 + '%'
+    });
+    clearTimeout(tick);
+  }
+  startProgressbar();
+})
 
 
 // フェードインアニメーション
 function fadeAnime(){
-  $('.blurTrigger').each(function(){
-    var elemPos = $(this).offset().top + 300;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight){
-      $(this).addClass('blur');
-    } else {
-      $(this).removeClass('blur');
-    }
-  });
-
-  $('.zoomInTrigger').each(function(){
-    var elemPos = $(this).offset().top + 200;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight){
-      $(this).addClass('zoomIn');
-    } else {
-      $(this).removeClass('zoomIn');
-    }
-  });
+  // $('.zoomInTrigger').each(function(){
+  //   var elemPos = $(this).offset().top + 200;
+  //   var scroll = $(window).scrollTop();
+  //   var windowHeight = $(window).height();
+  //   if (scroll >= elemPos - windowHeight){
+  //     $(this).addClass('zoomIn');
+  //   } else {
+  //     $(this).removeClass('zoomIn');
+  //   }
+  // });
 
   $('.fadeUpTrigger').each(function(){
-    var elemPos = $(this).offset().top + 200;
+    var elemPos = $(this).offset().top + 100;
     var scroll = $(window).scrollTop();
     var windowHeight = $(window).height();
     if (scroll >= elemPos - windowHeight){
@@ -58,12 +83,39 @@ function fadeAnime(){
       $(this).removeClass('fadeUp');
     }
   });
+
+  $('.fadeRightTrigger').each(function(){
+    var elemPos = $(this).offset().top + 400;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight){
+      $(this).addClass('fadeRight');
+    } else {
+      $(this).removeClass('fadeRight');
+    }
+  });
 }
 
 $(window).scroll(function(){
   fadeAnime();
 });
 
+function blurAnime(){
+  $('.blurTrigger').each(function(){
+    var elemPos = $(this).offset().top - 50;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight){
+      $(this).addClass('blur');
+    } else {
+      $(this).removeClass('blur');
+    }
+  });
+}
+
+$(window).on('load',function(){
+  blurAnime();
+});
 
 // スムーススクロール
 $(function(){
@@ -78,3 +130,19 @@ $(function(){
     return false;
   });
 });
+
+// アコーディオンメニュー
+$('.accordion_title').on('click',function(){
+  $('.accordion_box').slideUp(500);
+
+  let findElm = $(this).next('.accordion_box');
+
+  if($(this).hasClass('close')){
+    $(this).removeClass('close');
+  }else{
+    $('.close').removeClass('close');
+    $(this).addClass('close');
+    $(findElm).slideDown(500);
+  }
+});
+
