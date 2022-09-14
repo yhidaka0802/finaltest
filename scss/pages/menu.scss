@@ -32,10 +32,13 @@
 }
 
 .menu {
-
+  .section_title p{
+    margin-top: 16px;
+  }
   ul {
     margin: 0 auto;
     max-width: 800px;
+
     @include mq(tb){
       max-width: 600px;
     }
@@ -45,6 +48,7 @@
   }
   li{
     margin: 60px auto;
+
     @include mq(sp){
       margin: 30px auto;
 
@@ -59,28 +63,30 @@
     &_title{
       position: relative;
       padding: 18px 0 18px 70px;
-      font-size: 24px;
+      background-color: $cGreen;
       color: $cWhite;
+      font-size: 24px;
       line-height: 1;
       cursor: pointer;
-      background-color: $cGreen;
+
       @include mq(sp){
-        font-size: 20px;
         padding-left: 60px;
+        font-size: 20px;
       }
       
       &::before,&::after{
         position: absolute;
-        content: '';
         width: 20px;
         height: 3px;
         background-color: white;
+        content: '';
       }
 
       &::before{
         top: 48%;
         left: 23px;
         transform: rotate(0deg);
+
         @include mq(sp){
           left: 15px;
         }
@@ -89,6 +95,7 @@
         top: 48%;
         left: 23px;
         transform: rotate(90deg);
+
         @include mq(sp){
           left: 15px;
         }
@@ -104,26 +111,26 @@
 
     &_box{
       display: none;
-      background-color: $cWhite;
       padding: 4%;
+      background-color: $cWhite;
     }
   }
 
   &_message{
-    text-align: center;
+    padding-bottom: 100px;
     color: $cGreen;
+    text-align: center;
     font-weight: bold;
     font-size: 28px;
-    padding-bottom: 100px;
 
     @include mq(tb){
-      max-width: 580px;
       margin: 0 auto;
+      max-width: 580px;
     }
     @include mq(sp){
-      font-size: 24px;
-      max-width: 300px;
       margin-top: 50px;
+      max-width: 300px;
+      font-size: 24px;
     }
   }
 }

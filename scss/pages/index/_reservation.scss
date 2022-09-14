@@ -1,18 +1,18 @@
 .reservation{
-  background-color: $cbg;
   padding-bottom: 150px;
+  background-color: $cbg;
+
   @include mq(sp){
     padding-bottom: 120px;
-    // padding-top: 40px;
   }
   &_content{
     text-align: center;
 
     @include mq(sp){
       &>p{
-      text-align: left;
       display: inline-block;
         width: 300px;
+      text-align: left;
       }
     }
   }

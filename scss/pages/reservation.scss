@@ -21,7 +21,8 @@
 }
 
 .reservation{
-  padding-bottom: 300px;
+  padding-bottom: 100px;
+  text-align: center;
   span{
     color: $cRed;
   }
@@ -33,9 +34,9 @@
   }
 
   &_form{
-    position: relative;
     margin: 0 auto;
-    max-width: 550px;
+    max-width: 512px;
+
     @include mq(tb){
       max-width: 365px;
     }
@@ -45,62 +46,66 @@
 
     &_title{
       font-weight: bold;
-      font-size: 18px;
+      font-size: 22px;
+
+      @include mq(sp){
+        font-size: 18px;
+      }
     }
 
     &_box {
-      position: absolute;
-      left: 200px;
-      padding-left: 8px;
-      width: 350px;
+      margin-top: 0;
+      padding: 8px 0 8px 8px;
+      width: 500px;
       height: 28px;
-      font-size: 18px;
+      font-size: 20px;
+
       @include mq(tb){
-        left: 0;
-        margin-top: 34px;
+        padding: 4px 0 4px 8px;
+        width: 350px;
       }
       @include mq(sp){
         width: 250px;
+        font-size: 14px;
       }
     }
 
     .menu{
       width: 200px;
-      height: 34px;
+      height: 48px;
     }
 
     .date{
       width: 188px;
-      height: 30px;
+      height: 28px;
     }
 
     &_textarea {
-      position: absolute;
-      left: 200px;
-      width: 358px;
+      padding: 8px;
+      width: 494px;
       height: 200px;
       font-size: 18px;
+
       @include mq(tb){
-        left: 0;
-        margin-top: 34px;
+        width: 358px;
       }
       @include mq(sp){
         width: 258px;
+        font-size: 14px;
       }
     }
   }
 
   &_box{
-    margin-bottom: 30px;
-    @include mq(tb){
-      margin-bottom: 56px;
+    margin-bottom: 24px;
+    text-align: left;
+    .block{
+      display: block;
     }
   }
 
   &_btn{
-    position: absolute;
-    bottom: -280px;
-    left: calc(50% - 73px);
+    margin: 24px auto 0;
     padding: 18px 36px;
     border: 1px solid $cWhite;
     background-color: $cGreen;
@@ -109,9 +114,6 @@
     font-size: 18px;
     line-height: 1;
     transition: .3s;
-    @include mq(tb){
-      bottom: -290px;
-    }
 
     &:hover{
       box-sizing: border-box;

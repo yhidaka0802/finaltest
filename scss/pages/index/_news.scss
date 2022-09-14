@@ -1,0 +1,25 @@
+.news{
+  padding-bottom: 80px;
+
+  .section_title {
+    margin: 0 auto;
+    max-width: 750px;
+    border-bottom: 3px solid $cGreen-light;
+  }
+  &_contents{
+    overflow-y: scroll;
+    margin: 0 auto;
+    padding: 0 4%;
+    max-width: 750px;
+    height: 400px;
+    dt{
+      padding-top: 16px;
+      color: $cGreen-light;
+      font-weight: bold;
+    }
+    dd{
+      padding-bottom: 16px;
+      border-bottom: 1px dotted $cGreen;
+    }
+  }
+}

@@ -62,16 +62,6 @@ $(function(){
 
 // フェードインアニメーション
 function fadeAnime(){
-  // $('.zoomInTrigger').each(function(){
-  //   var elemPos = $(this).offset().top + 200;
-  //   var scroll = $(window).scrollTop();
-  //   var windowHeight = $(window).height();
-  //   if (scroll >= elemPos - windowHeight){
-  //     $(this).addClass('zoomIn');
-  //   } else {
-  //     $(this).removeClass('zoomIn');
-  //   }
-  // });
 
   $('.fadeUpTrigger').each(function(){
     var elemPos = $(this).offset().top + 100;

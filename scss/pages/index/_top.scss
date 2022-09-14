@@ -1,29 +1,43 @@
 .top {
   padding-top: 70px;
-  height: calc(100vh - 70px);
   width: 100%;
+  height: calc(100vh - 70px);
   background-color: transparent;
   
   &_wrapper {
     position: fixed;
-    z-index: -2;
-    left: 0;
     right: 0;
+    left: 0;
+    z-index: -2;
     height: calc(100vh - 70px);
+
     &::after{
-      content: '';
-      background-color: $cWhite-thin;
       position: absolute;
-      left: 0;
       top: 0;
       right: 0;
       bottom: 0;
+      left: 0;
+      background-color: $cWhite-thin;
+      content: '';
     }
 
     img {
       height: 100%;
+
       object-fit: cover;
-      object-position: 70% 50%;
+    }
+    
+    .item1 img{
+      object-position: 80% 50%;
+    }
+    .item2 img{
+      object-position: 80% 30%;
+    }
+    .item3 img{
+      object-position: 48% 50%;
+    }
+    .item4 img{
+      object-position: 75% 50%;
     }
   }
 
@@ -31,8 +45,9 @@
     position: absolute;
     bottom: 8%;
     left: 7%;
-    background-color: rgba(255,255,255,.8);
     padding: 8px 16px;
+    background-color: rgba(255,255,255,.8);
+
     @include mq(tb){
       width: 360px;
     }
@@ -44,24 +59,25 @@
 
 // slick
 .slick-slide{
-  height: calc(100vh - 70px);
   overflow: hidden;
+  height: calc(100vh - 70px);
 
   img{
     display: block;
     width: 100%;
     height: 100%;
+
     object-fit: cover;
   }
 }
 
 .progress_bar{
-  width: 100%;
-  background-color: $cWhite;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
+  width: 100%;
+  background-color: $cWhite;
 
   .bar{
     width: 0%;

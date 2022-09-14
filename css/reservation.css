@@ -109,13 +109,13 @@ select {
 }
 
 body {
+  position: relative;
+  z-index: 1;
   color: #333;
   word-break: break-all;
   font-size: 18px;
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   line-height: 1.8;
-  position: relative;
-  z-index: 1;
 }
 @media screen and (max-width: 480px) {
   body {
@@ -156,8 +156,8 @@ h1 {
 }
 
 h2 {
-  font-size: 60px;
   color: #71CC14;
+  font-size: 60px;
 }
 @media screen and (max-width: 480px) {
   h2 {
@@ -173,9 +173,9 @@ nav a {
 }
 
 .wrapper {
-  max-width: 1100px;
   margin: 0 auto;
   padding: 0 2%;
+  max-width: 1100px;
 }
 
 .openbtn {
@@ -205,9 +205,9 @@ nav a {
     transform: translate(-50%, -50%);
   }
   #g-nav li {
-    text-align: center;
     margin-bottom: 40px;
     padding-right: 0;
+    text-align: center;
   }
   #g-nav li a {
     padding: 10px;
@@ -302,13 +302,13 @@ nav a {
 }
 
 .fadeRight {
+  opacity: 0;
   -webkit-animation-name: fadeRightAnime;
           animation-name: fadeRightAnime;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  opacity: 0;
 }
 
 @-webkit-keyframes fadeRightAnime {
@@ -392,9 +392,6 @@ nav a {
 #g-nav li a:hover::after {
   transform: scale(1, 1);
 }
-#g-nav li.current a::after {
-  transform: scale(1, 1);
-}
 
 .header_wrapper {
   position: fixed;
@@ -414,9 +411,9 @@ nav a {
   align-items: center;
 }
 .header_logo_img {
+  margin-right: 18px;
   width: 50px;
   height: 50px;
-  margin-right: 18px;
 }
 .header_logo_img img {
   -o-object-fit: cover;
@@ -461,13 +458,13 @@ nav a {
 
 .section_title {
   padding-top: 120px;
-  text-align: center;
   padding-bottom: 40px;
+  text-align: center;
 }
 .section_title h3 {
-  font-size: 32px;
-  color: #559932;
   margin-bottom: 8px;
+  color: #559932;
+  font-size: 32px;
 }
 @media screen and (max-width: 480px) {
   .section_title h3 {
@@ -475,9 +472,9 @@ nav a {
   }
 }
 .section_title span {
-  font-size: 24px;
   color: #71CC14;
   font-weight: bold;
+  font-size: 24px;
 }
 @media screen and (max-width: 480px) {
   .section_title span {
@@ -489,10 +486,10 @@ nav a {
   background-color: #559932;
 }
 .copyright p {
-  text-align: center;
-  line-height: 3;
   color: #fff;
+  text-align: center;
   font-size: 12px;
+  line-height: 3;
 }
 
 .top {
@@ -508,7 +505,8 @@ nav a {
 }
 
 .reservation {
-  padding-bottom: 300px;
+  padding-bottom: 100px;
+  text-align: center;
 }
 .reservation span {
   color: #880000;
@@ -519,9 +517,8 @@ nav a {
   text-align: center;
 }
 .reservation_form {
-  position: relative;
   margin: 0 auto;
-  max-width: 550px;
+  max-width: 512px;
 }
 @media screen and (max-width: 768px) {
   .reservation_form {
@@ -535,65 +532,66 @@ nav a {
 }
 .reservation_form_title {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 22px;
+}
+@media screen and (max-width: 480px) {
+  .reservation_form_title {
+    font-size: 18px;
+  }
 }
 .reservation_form_box {
-  position: absolute;
-  left: 200px;
-  padding-left: 8px;
-  width: 350px;
+  margin-top: 0;
+  padding: 8px 0 8px 8px;
+  width: 500px;
   height: 28px;
-  font-size: 18px;
+  font-size: 20px;
 }
 @media screen and (max-width: 768px) {
   .reservation_form_box {
-    left: 0;
-    margin-top: 34px;
+    padding: 4px 0 4px 8px;
+    width: 350px;
   }
 }
 @media screen and (max-width: 480px) {
   .reservation_form_box {
     width: 250px;
+    font-size: 14px;
   }
 }
 .reservation_form .menu {
   width: 200px;
-  height: 34px;
+  height: 48px;
 }
 .reservation_form .date {
   width: 188px;
-  height: 30px;
+  height: 28px;
 }
 .reservation_form_textarea {
-  position: absolute;
-  left: 200px;
-  width: 358px;
+  padding: 8px;
+  width: 494px;
   height: 200px;
   font-size: 18px;
 }
 @media screen and (max-width: 768px) {
   .reservation_form_textarea {
-    left: 0;
-    margin-top: 34px;
+    width: 358px;
   }
 }
 @media screen and (max-width: 480px) {
   .reservation_form_textarea {
     width: 258px;
+    font-size: 14px;
   }
 }
 .reservation_box {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+  text-align: left;
 }
-@media screen and (max-width: 768px) {
-  .reservation_box {
-    margin-bottom: 56px;
-  }
+.reservation_box .block {
+  display: block;
 }
 .reservation_btn {
-  position: absolute;
-  bottom: -280px;
-  left: calc(50% - 73px);
+  margin: 24px auto 0;
   padding: 18px 36px;
   border: 1px solid #fff;
   background-color: #559932;
@@ -602,11 +600,6 @@ nav a {
   font-size: 18px;
   line-height: 1;
   transition: 0.3s;
-}
-@media screen and (max-width: 768px) {
-  .reservation_btn {
-    bottom: -290px;
-  }
 }
 .reservation_btn:hover {
   box-sizing: border-box;

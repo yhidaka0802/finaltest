@@ -109,13 +109,13 @@ select {
 }
 
 body {
+  position: relative;
+  z-index: 1;
   color: #333;
   word-break: break-all;
   font-size: 18px;
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   line-height: 1.8;
-  position: relative;
-  z-index: 1;
 }
 @media screen and (max-width: 480px) {
   body {
@@ -156,8 +156,8 @@ h1 {
 }
 
 h2 {
-  font-size: 60px;
   color: #71CC14;
+  font-size: 60px;
 }
 @media screen and (max-width: 480px) {
   h2 {
@@ -173,9 +173,9 @@ nav a {
 }
 
 .wrapper {
-  max-width: 1100px;
   margin: 0 auto;
   padding: 0 2%;
+  max-width: 1100px;
 }
 
 .openbtn {
@@ -205,9 +205,9 @@ nav a {
     transform: translate(-50%, -50%);
   }
   #g-nav li {
-    text-align: center;
     margin-bottom: 40px;
     padding-right: 0;
+    text-align: center;
   }
   #g-nav li a {
     padding: 10px;
@@ -302,13 +302,13 @@ nav a {
 }
 
 .fadeRight {
+  opacity: 0;
   -webkit-animation-name: fadeRightAnime;
           animation-name: fadeRightAnime;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  opacity: 0;
 }
 
 @-webkit-keyframes fadeRightAnime {
@@ -392,9 +392,6 @@ nav a {
 #g-nav li a:hover::after {
   transform: scale(1, 1);
 }
-#g-nav li.current a::after {
-  transform: scale(1, 1);
-}
 
 .header_wrapper {
   position: fixed;
@@ -414,9 +411,9 @@ nav a {
   align-items: center;
 }
 .header_logo_img {
+  margin-right: 18px;
   width: 50px;
   height: 50px;
-  margin-right: 18px;
 }
 .header_logo_img img {
   -o-object-fit: cover;
@@ -461,13 +458,13 @@ nav a {
 
 .section_title {
   padding-top: 120px;
-  text-align: center;
   padding-bottom: 40px;
+  text-align: center;
 }
 .section_title h3 {
-  font-size: 32px;
-  color: #559932;
   margin-bottom: 8px;
+  color: #559932;
+  font-size: 32px;
 }
 @media screen and (max-width: 480px) {
   .section_title h3 {
@@ -475,9 +472,9 @@ nav a {
   }
 }
 .section_title span {
-  font-size: 24px;
   color: #71CC14;
   font-weight: bold;
+  font-size: 24px;
 }
 @media screen and (max-width: 480px) {
   .section_title span {
@@ -489,15 +486,15 @@ nav a {
   background-color: #559932;
 }
 .copyright p {
-  text-align: center;
-  line-height: 3;
   color: #fff;
+  text-align: center;
   font-size: 12px;
+  line-height: 3;
 }
 
 .reservation {
-  background-color: #F2F2F2;
   padding-bottom: 150px;
+  background-color: #F2F2F2;
 }
 @media screen and (max-width: 480px) {
   .reservation {
@@ -509,9 +506,9 @@ nav a {
 }
 @media screen and (max-width: 480px) {
   .reservation_content > p {
-    text-align: left;
     display: inline-block;
     width: 300px;
+    text-align: left;
   }
 }
 .reservation_call {
@@ -584,9 +581,9 @@ nav a {
 }
 @media screen and (max-width: 768px) {
   .access_wrapper {
-    height: 750px;
     display: flex;
     flex-direction: column-reverse;
+    height: 750px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -599,20 +596,20 @@ nav a {
   align-items: center;
 }
 .access_logo_img {
-  width: 50px;
-  height: 50px;
   margin-right: 18px;
   margin-bottom: 14px;
+  width: 50px;
+  height: 50px;
 }
 .access_logo_img img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 .access_content {
-  max-width: 560px;
   position: absolute;
-  left: 50px;
   top: 30px;
+  left: 50px;
+  max-width: 560px;
 }
 @media screen and (max-width: 768px) {
   .access_content {
@@ -621,10 +618,10 @@ nav a {
   }
 }
 .access_map {
+  overflow: hidden;
   margin-left: 650px;
   width: calc(100% - 650px);
   height: 400px;
-  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .access_map {
@@ -638,9 +635,9 @@ nav a {
   }
 }
 .access_map iframe {
+  margin-top: -150px;
   width: 100%;
   height: 700px;
-  margin-top: -150px;
 }
 @media screen and (max-width: 480px) {
   .access_map iframe {
@@ -649,8 +646,8 @@ nav a {
 }
 
 .biz_hour {
-  margin-top: 24px;
   display: block;
+  margin-top: 24px;
   border-collapse: collapse;
 }
 .biz_hour th {
@@ -659,8 +656,8 @@ nav a {
 }
 .biz_hour th, .biz_hour td {
   padding: 10px 20px;
-  text-align: center;
   border-bottom: 1px solid #559932;
+  text-align: center;
 }
 @media screen and (max-width: 480px) {
   .biz_hour th, .biz_hour td {
@@ -721,8 +718,8 @@ nav a {
 }
 @media screen and (max-width: 768px) {
   .staff_content {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
   }
 }
 .staff_img {
@@ -731,8 +728,8 @@ nav a {
 }
 @media screen and (max-width: 768px) {
   .staff_img {
-    width: auto;
     max-width: 600px;
+    width: auto;
     height: 400px;
   }
 }
@@ -759,8 +756,8 @@ nav a {
 @media screen and (max-width: 768px) {
   .staff_text {
     position: initial;
-    width: auto;
     max-width: 600px;
+    width: auto;
   }
 }
 .staff_text h4 {
@@ -777,19 +774,19 @@ nav a {
 @media screen and (max-width: 768px) {
   .staff_text h4 {
     position: unset;
-    width: auto;
-    max-width: 600px;
     margin-top: 30px;
     margin-bottom: 20px;
-    text-align: center;
     padding: 24px 0;
+    max-width: 600px;
+    width: auto;
+    text-align: center;
   }
 }
 @media screen and (max-width: 480px) {
   .staff_text h4 {
-    font-size: 24px;
-    padding: 12px 0;
     margin-top: 20px;
+    padding: 12px 0;
+    font-size: 24px;
   }
 }
 .staff_text_content {
@@ -811,13 +808,13 @@ nav a {
 }
 @media screen and (max-width: 768px) {
   .staff li > ul {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
   }
 }
 .staff_introduction {
-  text-align: center;
   margin-right: 40px;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .staff_introduction {
@@ -828,9 +825,10 @@ nav a {
   margin-right: 0;
 }
 .staff_img_mini {
+  overflow: hidden;
   max-width: 300px;
   height: 300px;
-  overflow: hidden;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.1);
 }
 .staff_img_mini img {
   height: 100%;
@@ -853,21 +851,21 @@ nav a {
 }
 @media screen and (max-width: 768px) {
   .staff_name {
-    color: #fff;
     margin-bottom: 50px;
+    color: #fff;
   }
 }
 .staff_name p {
   display: inline;
+  padding: 16px 24px;
   background-color: #559932;
+  color: white;
   font-weight: bold;
   font-size: 24px;
-  padding: 16px 24px;
-  color: white;
 }
 @media screen and (max-width: 480px) {
   .staff_name p {
-    font-size: 20px;
     padding: 12px 18px;
+    font-size: 20px;
   }
 }

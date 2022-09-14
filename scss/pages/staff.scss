@@ -41,6 +41,7 @@
   h3{
     margin-bottom: 20px;
     font-size: 28px;
+
     @include mq(tb){
       text-align: center;
     }
@@ -51,17 +52,19 @@
 
   &_content{
     display: flex;
+
     @include mq(tb){
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
     }
   }
   &_img{
     width: 400px;
     height: 525px;
+
     @include mq(tb){
-      width: auto;
       max-width: 600px;
+      width: auto;
       height: 400px;
     }
     @include mq(sp){
@@ -82,10 +85,11 @@
   &_text{
     position: relative;
     width: 600px;
+
     @include mq(tb){
       position: initial;
-      width: auto;
       max-width: 600px;
+      width: auto;
     }
 
     h4{
@@ -98,19 +102,19 @@
       color: white;
       font-size: 28px;
       line-height: 1;
+
       @include mq(tb){
         position: unset; 
-        width: auto;
-        max-width: 600px;
         margin-top: 30px;
         margin-bottom: 20px;
-        text-align: center;
         padding: 24px 0;
-      }
+        max-width: 600px; width: auto;
+        text-align: center;
+        }
       @include mq(sp){
-        font-size: 24px;
-        padding: 12px 0;
         margin-top: 20px;
+        padding: 12px 0;
+        font-size: 24px;
       }
     }
 
@@ -118,6 +122,7 @@
       position: absolute;
       top: 180px;
       left: 50px;
+
       @include mq(tb){
         position: initial;
       }
@@ -131,15 +136,17 @@
 li>ul{
   display: flex;
   justify-content: center;
+
   @include mq(tb){
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
   }
 }
 
   &_introduction{
-    text-align: center;
     margin-right: 40px;
+    text-align: center;
+
     @include mq(tb){
       margin-right: 0;
     }
@@ -150,9 +157,10 @@ li>ul{
   }
 
   &_img_mini{
+    overflow: hidden;
     max-width: 300px;
     height: 300px;
-    overflow: hidden;
+    box-shadow: 4px 4px 8px 0px rgba(0,0,0,.1);
 
     img{
       height: 100%;
@@ -172,20 +180,22 @@ li>ul{
 
   &_name{
     margin-top: 24px;
+
     @include mq(tb){
-      color: $cWhite;
       margin-bottom: 50px;
+      color: $cWhite;
     }
     p{
       display: inline;
+      padding: 16px 24px;
       background-color: $cGreen;
+      color: white;
       font-weight: bold;
       font-size: 24px;
-      padding: 16px 24px;
-      color: white;
+
       @include mq(sp){
-        font-size: 20px;
         padding: 12px 18px;
+        font-size: 20px;
       }
     }
   }

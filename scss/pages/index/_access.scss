@@ -2,10 +2,11 @@
   &_wrapper{
     position: relative;
     background-color: $cWhite;
+
     @include mq(tb){
-      height: 750px;
       display: flex;
       flex-direction: column-reverse;
+      height: 750px;
     }
     @include mq(sp){
       height: 647px;
@@ -16,10 +17,10 @@
     display: flex;
     align-items: center;
     &_img{
-      width: 50px;
-      height: 50px;
       margin-right: 18px;
       margin-bottom: 14px;
+      width: 50px;
+      height: 50px;
       img {
         object-fit: cover;
       }
@@ -27,10 +28,11 @@
   }
 
   &_content {
-    max-width: 560px;
     position: absolute;
-    left: 50px;
     top: 30px;
+    left: 50px;
+    max-width: 560px;
+
     @include mq(tb){
       position: initial;
       margin: 50px auto;
@@ -38,10 +40,10 @@
   }
   
   &_map {
+    overflow: hidden;
     margin-left: 650px;
     width: calc(100% - 650px);
     height: 400px;
-    overflow: hidden;
 
     @include mq(tb){
       margin-left: 0;
@@ -52,9 +54,10 @@
     }
 
     iframe {
+      margin-top: -150px;
       width: 100%;
       height: 700px;
-      margin-top: -150px;
+
       @include mq(sp){
         height: 600px;
       }
@@ -63,8 +66,8 @@
 }
 
 .biz_hour {
-  margin-top: 24px;
   display: block;
+  margin-top: 24px;
   border-collapse: collapse;
   
 
@@ -75,8 +78,8 @@
 
   th, td {
     padding: 10px 20px;
-    text-align: center;
     border-bottom: 1px solid $cGreen;
+    text-align: center;
 
     @include mq(sp){
       padding: 5px;
