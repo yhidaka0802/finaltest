@@ -830,6 +830,16 @@ nav a {
   height: 300px;
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 768px) {
+  .staff_img_mini {
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .staff_img_mini {
+    max-width: 300px;
+  }
+}
 .staff_img_mini img {
   height: 100%;
   -o-object-fit: cover;
@@ -862,6 +872,11 @@ nav a {
   color: white;
   font-weight: bold;
   font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+  .staff_name p {
+    padding: 16px 36px;
+  }
 }
 @media screen and (max-width: 480px) {
   .staff_name p {

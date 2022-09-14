@@ -161,7 +161,12 @@ li>ul{
     max-width: 300px;
     height: 300px;
     box-shadow: 4px 4px 8px 0px rgba(0,0,0,.1);
-
+    @include mq(tb){
+      max-width: 500px;
+    }
+    @include mq(sp){
+      max-width: 300px;
+    }
     img{
       height: 100%;
 
@@ -192,7 +197,9 @@ li>ul{
       color: white;
       font-weight: bold;
       font-size: 24px;
-
+      @include mq(tb){
+        padding: 16px 36px;
+      }
       @include mq(sp){
         padding: 12px 18px;
         font-size: 20px;
